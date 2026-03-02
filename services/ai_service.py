@@ -81,7 +81,7 @@ def _try_gemini(source_data: dict, target_type: str, gemini_encrypted_key: str) 
     real_api_key = decrypt_token(gemini_encrypted_key)
     genai.configure(api_key=real_api_key)
     
-    model = genai.GenerativeModel("gemini-2.0-flash")
+    model = genai.GenerativeModel("gemini-1.5-flash")
     
     user_content = f"Dữ liệu sản phẩm ({target_type}): {json.dumps(source_data, ensure_ascii=False)}"
     
